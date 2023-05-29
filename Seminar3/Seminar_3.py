@@ -1,9 +1,11 @@
 """
 
-Вручную создайте список с целыми числами, которые повторяются. Получите новый список, который содержит уникальные (без повтора) элементы исходного списка.
+Вручную создайте список с целыми числами, которые повторяются. Получите новый список, который содержит
+ уникальные (без повтора) элементы исходного списка.
 *Подготовьте два решения, короткое и длинное, которое не использует другие коллекции помимо списков
 
-Пользователь вводит данные. Сделайте проверку данных и преобразуйте если возможно в один из вариантов ниже:
+Пользователь вводит данные. Сделайте проверку данных и преобразуйте если возможно в один из вариантов
+ ниже:
 целое положительное число
 вещественное положительное или отрицательное число
 строку в нижнем регистре, если в строке есть хотя бы одна заглавная буква
@@ -19,11 +21,12 @@ def uniq(numbers: list) -> list:
             result.append(i)
     return result
 
+
 def uniq2(numbers: list) -> list:
     return list(set(numbers))
 
 
-def reformat(text: str) -> (int, float, str):
+def reformat1(text: str) -> (int, float, str):
     result = None
     if text.isdigit():
         if "." not in text:
@@ -37,7 +40,8 @@ def reformat(text: str) -> (int, float, str):
 
     return result
 
-def reformat(text: str) -> (int, float, str):
+
+def reformat2(text: str) -> (int, float, str):
     result = None
     if "." in text or (text.count("-") and text.index("-") == 0):
         result = float(text)
@@ -51,7 +55,7 @@ def reformat(text: str) -> (int, float, str):
     return result
 
 
-def get_type_dict(corteg:tuple) -> dict:
+def get_type_dict(corteg: tuple) -> dict:
     result = {}
     for i in corteg:
         result.setdefault(type(i), []).append(i)
@@ -60,6 +64,3 @@ def get_type_dict(corteg:tuple) -> dict:
 
 def my_list_index(mylist: list[int]) -> list[int]:
     return [i for i, j in filter(lambda x: x[1] % 2 != 0, enumerate(mylist, 1))]
-
-2
-
