@@ -83,6 +83,7 @@ class Student:
             if number < 0 or number > 100:
                 raise ValueError("Оценка вне допустимого диапазона (0-100)")
             self.lessons["уроки"][name_of_lesson]["тесты"].append(number)
+
             """
             Функция reduce() модуля functools кумулятивно применяет функцию function к элементам итерируемой iterable 
             последовательности, сводя её к единственному значению.
